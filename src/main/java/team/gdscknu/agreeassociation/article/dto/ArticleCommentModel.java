@@ -12,7 +12,8 @@ public record ArticleCommentModel(
         String content,
         LocalDateTime createdAt,
         UserInfoModel author,
-        Integer likeCount,
+        Integer agreeCount,
+        Integer disagreeCount,
         Long parentCommentId
 ) {
 }

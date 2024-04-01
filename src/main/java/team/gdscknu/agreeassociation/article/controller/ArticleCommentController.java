@@ -32,6 +32,18 @@ public class ArticleCommentController {
         throw new UnsupportedOperationException();
     }
 
+    @Operation(summary ="댓글 인정", description = "댓글 인정 갯수 반환")
+    @PostMapping("/api/articles/{articleId}/comments/{commentId}/agree")
+    public Long likeArticleComment(@PathVariable Long articleId, @PathVariable Long commentId){
+        throw new UnsupportedOperationException();
+    }
+
+    @Operation(summary = "댓글 노인정", description = "댓글 싫어요")
+    @PostMapping("/api/articles/{articleId}/comments/{commentId}/disagree")
+    public Long dislikeArticleComment(@PathVariable Long articleId, @PathVariable Long commentId){
+        throw new UnsupportedOperationException();
+    }
+
     @Operation(summary = "게시글 댓글 삭제", description = "게시글 댓글 삭제")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PostMapping("/api/articles/{articleId}/comments/{commentId}")

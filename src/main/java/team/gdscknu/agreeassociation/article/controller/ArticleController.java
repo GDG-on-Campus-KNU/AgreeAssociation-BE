@@ -47,12 +47,18 @@ public class ArticleController {
         throw new UnsupportedOperationException();
     }
 
-    @Operation(summary = "게시글 좋아요", description = "게시글 좋아요")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PostMapping("/api/articles/{id}/like")
-    public void likeArticle(@PathVariable Long id){
+    @Operation(summary = "게시글 인정", description = "게시글 인정 수 반환")
+    @PostMapping("/api/articles/{id}/agree")
+    public Long agreeArticle(@PathVariable Long id){
         throw new UnsupportedOperationException();
     }
+
+    @Operation(summary = "게시글 노인정", description = "게시글 노인정 수 반환")
+    @PostMapping("/api/articles/{id}/disagree")
+    public Long disagreeArticle(@PathVariable Long id){
+        throw new UnsupportedOperationException();
+    }
+
 
     @Operation(summary = "게시글 작성", description = "게시글 작성 성공시 게시글 ID 반환")
     @ResponseStatus(HttpStatus.CREATED)
