@@ -1,4 +1,4 @@
-package team.gdscknu.agreeassociation.controller.common.config;
+package team.gdscknu.agreeassociation.core.controller.config;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;

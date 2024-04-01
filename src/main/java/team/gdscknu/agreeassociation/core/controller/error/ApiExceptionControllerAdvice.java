@@ -1,4 +1,4 @@
-package team.gdscknu.agreeassociation.controller.common.error;
+package team.gdscknu.agreeassociation.core.controller.error;
 
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

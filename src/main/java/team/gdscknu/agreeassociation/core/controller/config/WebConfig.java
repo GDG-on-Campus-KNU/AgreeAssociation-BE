@@ -1,4 +1,4 @@
-package team.gdscknu.agreeassociation.controller.common.config;
+package team.gdscknu.agreeassociation.core.controller.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
