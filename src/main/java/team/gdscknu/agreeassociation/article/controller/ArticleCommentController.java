@@ -46,7 +46,7 @@ public class ArticleCommentController {
 
     @Operation(summary = "게시글 댓글 삭제", description = "게시글 댓글 삭제")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PostMapping("/api/articles/{articleId}/comments/{commentId}")
+    @DeleteMapping("/api/articles/{articleId}/comments/{commentId}")
     public void deleteArticleComment(){
         throw new UnsupportedOperationException();
     }
