@@ -5,7 +5,11 @@ import jakarta.validation.constraints.Min;
 public record PagingQuery(
         @Min(0)
         Integer page,
-        @Min(1)
         Integer size
 ) {
+        public PagingQuery {
+                if (size == null) {
+                        size = 10;
+                }
+        }
 }
