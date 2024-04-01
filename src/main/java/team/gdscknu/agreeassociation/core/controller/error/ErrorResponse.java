@@ -1,4 +1,12 @@
 package team.gdscknu.agreeassociation.core.controller.error;
 
-public class ErrorResponse {
+import lombok.Builder;
+
+import java.util.List;
+
+@Builder
+public record ErrorResponse(
+        String debugMessage,
+        List<String> errors
+) {
 }
