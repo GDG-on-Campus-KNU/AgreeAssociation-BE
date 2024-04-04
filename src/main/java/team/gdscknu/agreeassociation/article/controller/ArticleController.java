@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import team.gdscknu.agreeassociation.article.dto.ArticleDetailModel;
 import team.gdscknu.agreeassociation.article.dto.ArticleFightModel;
 import team.gdscknu.agreeassociation.article.dto.ArticleModel;
 import team.gdscknu.agreeassociation.article.dto.request.ArticleCreateRequest;
@@ -35,7 +36,7 @@ public class ArticleController {
 
     @Operation(summary = "게시글 상세 조회", description = "게시글 상세 데이터 조회")
     @GetMapping("/api/articles/{id}")
-    public ArticleModel getArticle(@PathVariable Long id){
+    public ArticleDetailModel getArticle(@PathVariable Long id){
         throw new UnsupportedOperationException();
     }
 
