@@ -53,16 +53,16 @@ public class UserController {
         throw new UnsupportedOperationException();
     }
 
-    @Operation(summary = "내가 좋아요한 글 페이징", description = "내가 좋아요한 글 페이징 데이터 조회")
-    @GetMapping("/api/user/article-likes")
-    public PagingResponse<ArticleModel> pagingMyLikes(@RequestParam PagingQuery query) {
+    @Operation(summary = "내가 인정한 글 페이징", description = "내가 인정한 글 페이징 데이터 조회")
+    @GetMapping("/api/user/article-agrees")
+    public PagingResponse<ArticleModel> pagingMyAgrees(@RequestParam PagingQuery query) {
         throw new UnsupportedOperationException();
     }
 
 
-    @Operation(summary = "내가 좋아요한 댓글 페이징", description = "내가 좋아요한 댓글 페이징 데이터 조회")
-    @GetMapping("/api/user/comment-likes")
-    public PagingResponse<ArticleCommentModel> pagingMyCommentLikes(@RequestParam PagingQuery query) {
+    @Operation(summary = "내가 인정한 댓글 페이징", description = "내가 인정한 댓글 페이징 데이터 조회")
+    @GetMapping("/api/user/comment-agrees")
+    public PagingResponse<ArticleCommentModel> pagingMyCommentAgrees(@RequestParam PagingQuery query) {
         throw new UnsupportedOperationException();
     }
 }

@@ -1,10 +1,9 @@
 package team.gdscknu.agreeassociation.article.dto;
 
 import lombok.Builder;
-import org.springframework.lang.NonNull;
+import team.gdscknu.agreeassociation.article.domain.AgreeState;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Builder
 public record ArticleCommentModel(
@@ -14,6 +13,7 @@ public record ArticleCommentModel(
         UserInfoModel author,
         Integer agreeCount,
         Integer disagreeCount,
-        Long parentCommentId
+        Integer depth,//0: 댓글, 1: 대댓글
+        AgreeState agreeState
 ) {
 }

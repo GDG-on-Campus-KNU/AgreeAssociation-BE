@@ -12,7 +12,6 @@ import team.gdscknu.agreeassociation.article.dto.ArticleModel;
 import team.gdscknu.agreeassociation.article.dto.request.ArticleCreateRequest;
 import team.gdscknu.agreeassociation.article.dto.request.ArticleQuery;
 import team.gdscknu.agreeassociation.article.dto.request.ArticleUpdateRequest;
-import team.gdscknu.agreeassociation.core.dto.request.PagingQuery;
 import team.gdscknu.agreeassociation.core.dto.response.PagingResponse;
 
 
@@ -41,19 +40,13 @@ public class ArticleController {
     }
 
 
-    @Operation(summary = "게시글 좋아요 확인 ", description = "게시글 여부 확인")
-    @GetMapping("/api/articles/{id}/like")
-    public Boolean isLiked(@PathVariable Long id){
-        throw new UnsupportedOperationException();
-    }
-
-    @Operation(summary = "게시글 인정", description = "게시글 인정 수 반환")
+    @Operation(summary = "게시글 인정", description = "인정버튼 클릭 후, 게시글 인정 수 반환")
     @PostMapping("/api/articles/{id}/agree")
     public Long agreeArticle(@PathVariable Long id){
         throw new UnsupportedOperationException();
     }
 
-    @Operation(summary = "게시글 노인정", description = "게시글 노인정 수 반환")
+    @Operation(summary = "게시글 노인정", description = "노인정 버튼 클릭 후, 게시글 노인정 수 반환")
     @PostMapping("/api/articles/{id}/disagree")
     public Long disagreeArticle(@PathVariable Long id){
         throw new UnsupportedOperationException();

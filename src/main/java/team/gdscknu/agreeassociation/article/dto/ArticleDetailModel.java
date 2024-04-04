@@ -1,6 +1,7 @@
 package team.gdscknu.agreeassociation.article.dto;
 
 import lombok.Builder;
+import team.gdscknu.agreeassociation.article.domain.AgreeState;
 import team.gdscknu.agreeassociation.article.domain.AgreeType;
 
 import java.time.LocalDateTime;
@@ -22,6 +23,7 @@ public record ArticleDetailModel(
 
 
 
-        String content
+        String content,
+        AgreeState agreeState
 ) {
 }
