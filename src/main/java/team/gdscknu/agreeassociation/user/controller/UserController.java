@@ -54,14 +54,14 @@ public class UserController {
     }
 
     @Operation(summary = "내가 인정한 글 페이징", description = "내가 인정한 글 페이징 데이터 조회")
-    @GetMapping("/api/user/article-agrees")
+    @GetMapping("/api/user/articles-agree")
     public PagingResponse<ArticleModel> pagingMyAgrees(@RequestParam PagingQuery query) {
         throw new UnsupportedOperationException();
     }
 
 
     @Operation(summary = "내가 인정한 댓글 페이징", description = "내가 인정한 댓글 페이징 데이터 조회")
-    @GetMapping("/api/user/comment-agrees")
+    @GetMapping("/api/user/comments-agree")
     public PagingResponse<ArticleCommentModel> pagingMyCommentAgrees(@RequestParam PagingQuery query) {
         throw new UnsupportedOperationException();
     }
