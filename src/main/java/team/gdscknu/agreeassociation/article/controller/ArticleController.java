@@ -1,6 +1,9 @@
 package team.gdscknu.agreeassociation.article.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -35,6 +38,7 @@ public class ArticleController {
     }
 
     @Operation(summary = "게시글 상세 조회", description = "게시글 상세 데이터 조회")
+    @Parameter(in = ParameterIn.PATH, name = "id", description = "게시글 ID", required = true)
     @GetMapping("/api/articles/{id}")
     public ArticleDetailModel getArticle(@PathVariable Long id){
         throw new UnsupportedOperationException();
@@ -42,12 +46,14 @@ public class ArticleController {
 
 
     @Operation(summary = "게시글 인정", description = "인정버튼 클릭 후, 게시글 인정 수 반환")
+    @Parameter(in = ParameterIn.PATH, name = "id", description = "게시글 ID", required = true)
     @PostMapping("/api/articles/{id}/agree")
-    public Long agreeArticle(@PathVariable Long id){
+    public Long agreeArticle(@Schema(example = "path V", examples = "1") @PathVariable Long id){
         throw new UnsupportedOperationException();
     }
 
     @Operation(summary = "게시글 노인정", description = "노인정 버튼 클릭 후, 게시글 노인정 수 반환")
+    @Parameter(in = ParameterIn.PATH, name = "id", description = "게시글 ID", required = true)
     @PostMapping("/api/articles/{id}/disagree")
     public Long disagreeArticle(@PathVariable Long id){
         throw new UnsupportedOperationException();
@@ -62,6 +68,7 @@ public class ArticleController {
     }
 
     @Operation(summary = "게시글 수정", description = "게시글 수정")
+    @Parameter(in = ParameterIn.PATH, name = "id", description = "게시글 ID", required = true)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/api/articles/{id}")
     public void updateArticle(@PathVariable Long id, @RequestBody @Valid ArticleUpdateRequest request){
@@ -69,6 +76,7 @@ public class ArticleController {
     }
 
     @Operation(summary = "게시글 삭제", description = "게시글 삭제")
+    @Parameter(in = ParameterIn.PATH, name = "id", description = "게시글 ID", required = true)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/api/articles/{id}")
     public void deleteArticle(@PathVariable Long id){

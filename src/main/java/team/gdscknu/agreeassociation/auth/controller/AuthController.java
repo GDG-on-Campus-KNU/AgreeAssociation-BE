@@ -6,14 +6,11 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import team.gdscknu.agreeassociation.auth.dto.request.LoginEmailRequest;
-import team.gdscknu.agreeassociation.auth.dto.request.LoginSocialRequest;
 import team.gdscknu.agreeassociation.auth.dto.request.SignupEmailRequest;
 import team.gdscknu.agreeassociation.auth.dto.response.LoginResponse;
+import team.gdscknu.agreeassociation.auth.dto.response.TokenRefreshResponse;
 
 @Slf4j
 @Tag(name = "인증", description = "인증 관련 API")
@@ -41,6 +38,13 @@ public class AuthController {
 //    public LoginResponse socialLogin(@RequestBody @Valid LoginSocialRequest request) {
 //        throw new UnsupportedOperationException("Not implemented yet");
 //    }
+
+    @Operation(summary = "JWT 재발급", description = "리프래시 토큰으로 액세스 토큰 재발급")
+    @ResponseStatus(HttpStatus.OK)
+    @PostMapping("/api/auth/refresh")
+    public TokenRefreshResponse refresh(@RequestHeader("Authorization") String refreshHeader) {
+        throw new UnsupportedOperationException("Not implemented yet");
+    }
 
     @Operation(summary = "로그아웃", description = "로그아웃 처리")
     @ResponseStatus(HttpStatus.OK)
